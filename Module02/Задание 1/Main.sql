@@ -7,7 +7,6 @@ select TO_CHAR(order_date, 'YYYY')    as year
 from orders
 group by year, month
 order by year, month;
-
 ---
 
 
@@ -19,7 +18,6 @@ select TO_CHAR(order_date, 'YYYY')                  as year
 from orders
 group by year, month
 order by year, month;
-
 ---
 
 
@@ -30,7 +28,6 @@ select order_id,
 from orders
 group by order_id
 order by order_id;
-
 ---
 
 
@@ -41,7 +38,6 @@ select customer_id, customer_name,
 from orders
 group by customer_id, customer_name
 order by customer_id;
-
 ---
 
 
@@ -53,7 +49,6 @@ select TO_CHAR(order_date, 'YYYY')                  as year
 from orders
 group by year, month
 order by year, month;
-
 ---
 
 
@@ -66,7 +61,6 @@ select TO_CHAR(order_date, 'YYYY')                  as year
 from orders
 group by year, month, segment
 order by year, month, segment;
-
 ---
 
 
@@ -79,6 +73,4 @@ select TO_CHAR(order_date, 'YYYY')                  as year
 from orders
 group by year, month, category
 order by year, month, category;
-
 ---
-
