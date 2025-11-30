@@ -45,7 +45,7 @@ order by customer_id;
 
 select TO_CHAR(order_date, 'YYYY')                  as year
 	  ,TO_CHAR(order_date, 'MM')                    as month
-	  ,ROUND(AVG(discount) * 100) || '%' as avg_discount
+	  ,ROUND(AVG(discount) * 100) || '%'            as avg_discount
 from orders
 group by year, month
 order by year, month;
@@ -56,8 +56,8 @@ order by year, month;
 
 select TO_CHAR(order_date, 'YYYY')                  as year
 	  ,TO_CHAR(order_date, 'MM')                    as month
-	  ,segment
-	  ,ROUND(SUM(sales)) || '$' as sales
+	  ,                                                segment
+	  ,ROUND(SUM(sales)) || '$'                     as sales
 from orders
 group by year, month, segment
 order by year, month, segment;
@@ -68,8 +68,8 @@ order by year, month, segment;
 
 select TO_CHAR(order_date, 'YYYY')                  as year
 	  ,TO_CHAR(order_date, 'MM')                    as month
-	  ,category 
-	  ,ROUND(SUM(sales)) || '$' as sales
+	  ,                                                category 
+	  ,ROUND(SUM(sales)) || '$'                     as sales
 from orders
 group by year, month, category
 order by year, month, category;
